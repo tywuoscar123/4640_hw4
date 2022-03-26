@@ -1,10 +1,9 @@
 <?php
 require_once("index.php");
 if(!isset($_SESSION['game-control-var'])){
-    $gameControl = new wordGameController("https://www.cs.virginia.edu/~jh2jf/courses/cs4640/spring2022/wordlist.txt");
+    $gameControl = new wordGameController($listUrl);
     $_SESSION['game-control-var'] = $gameControl;
 }
-echo "<br><br><br>" . $_SESSION['game-control-var']->answer . "<br><br><br>";
 ?>
 <html>
 <body>
@@ -31,9 +30,9 @@ Previous guesses:
             echo $guess;
             echo "<br>";
         }
-        echo "<p>There were " . $_SESSION["commonCharCount"] . " characters in the word<p>";
-        echo "<p>" . $_SESSION["sameLocCount"] . " in the correct position." ;
-        echo "<p>Your guess was " . $_SESSION["guessLen"];
+        echo "<p>There were " . $_SESSION["guessInfo"]["commonCharCount"] . " characters in the word<p>";
+        echo "<p>" . $_SESSION["guessInfo"]["sameLocCount"] . " in the correct position." ;
+        echo "<p>Your guess was " . $_SESSION["guessInfo"]["guessLen"];
     }else{
         echo "No guess history availble.";
     }
@@ -44,8 +43,9 @@ Previous guesses:
     Please enter a word below to start guessing
 </p>
 <form action="index.php" method="get">
-Guess <input type="text" name="user-guess">
-<input type="submit" value="Submit">
+    Guess <input type="text" name="user-guess">
+    <input type="submit" value="Submit">
+</form>
 <br>
 
 </body>
