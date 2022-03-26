@@ -8,12 +8,15 @@ require_once("index.php");
 <body>
 <p> The word is: <?= $_SESSION['game-control-var']->answer ?></p>
 <br>
-Number of guesses: <?php 
-    if(isset($_SESSION["guess-hist"])){
-        echo count($_SESSION["guess-hist"]);
-    }
-    else{
-        echo 0;
+<?php
+    if($_SESSION["guessSuccessful"]){
+        echo "You successfully guessed the word in : ";
+        if(isset($_SESSION["guess-hist"])){
+            echo count($_SESSION["guess-hist"]). "guesses";
+        }
+        else{
+            echo "Unable to retrieve number of guesses";
+        }
     }
 ?>
 <br>

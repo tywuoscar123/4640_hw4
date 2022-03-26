@@ -122,6 +122,11 @@ if(isset($_POST['restart'])){
     header("Location: /game.php");
     die();
 }
+
+if(isset($_POST['quit-to-gameover'])){
+    header("Location: /gameover.php");
+    die();
+}
 ?>
 <!DOCTYPE html>
 <html>

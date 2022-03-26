@@ -45,7 +45,11 @@ Previous guesses:
 </p>
 <form action="index.php" method="get">
     Guess <input type="text" name="user-guess">
-    <input type="submit" value="Submit">
+    <input type="submit" value="Guess">
+</form>
+
+<form action="index.php" method="post">
+    <input type="submit" value="Quit" name="quit-to-gameover">
 </form>
 <br>
 
