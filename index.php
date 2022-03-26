@@ -1,7 +1,6 @@
 <?php
 //Sources used: https://cs4640.cs.virginia.edu, https://www.geeksforgeeks.org/count-common-characters-in-two-strings/
 session_start();
-
 $listUrl = "https://www.cs.virginia.edu/~jh2jf/courses/cs4640/spring2022/wordlist.txt";
 $_SESSION["guessSuccessful"] = false;
 
@@ -127,10 +126,20 @@ if(isset($_POST['quit-to-gameover'])){
     header("Location: /gameover.php");
     die();
 }
+if(isset($_POST['start'])){
+    header("Location: /welcome.php");
+    die();
+}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Wordle Extreme</title>
 <meta name="wordle extreme" content="index.php for wordle extreme">
+Click 
+<a href="./welcome.php"> here</a>
+if the screen is blank to be redirected to the welcome page.
+<br>
+<br>
+<br>
 </html>
