@@ -4,6 +4,7 @@ if(!isset($_SESSION['game-control-var'])){
     $gameControl = new wordGameController($listUrl);
     $_SESSION['game-control-var'] = $gameControl;
 }
+//echo "<br><br><br>" . $_SESSION['game-control-var']->answer . "<br><br><br>";
 ?>
 <html>
 <body>
