@@ -85,7 +85,7 @@ class wordGameController{
     function submitAns(){
         $_SESSION["guess-hist"][] = $_GET["user-guess"];
         $this->checkAns($_GET["user-guess"]);
-        header("Location: /game.php");
+        header("Location: ./game.php");
         die();
       }
 }
@@ -94,7 +94,7 @@ function basic_info(){
     $_SESSION["name"] = $_GET["name"];
     $_SESSION["email"] = $_GET["email"];
     $_SESSION["numGuess"] = 0;
-    header("Location: /game.php");
+    header("Location: ./game.php");
     die();
 }
 
@@ -113,7 +113,7 @@ if(isset($_GET['user-guess'])){
 if(isset($_POST['quit'])){
     session_unset();
     session_destroy();
-    header("Location: /welcome.php");
+    header("Location: ./welcome.php");
     die();
 }
 
@@ -121,16 +121,16 @@ if(isset($_POST['restart'])){
     unset($_SESSION['guess-hist']); 
     unset($_SESSION['guessInfo']);
     $_SESSION['game-control-var'] -> getRandWord($listUrl);
-    header("Location: /game.php");
+    header("Location: ./game.php");
     die();
 }
 
 if(isset($_POST['quit-to-gameover'])){
-    header("Location: /gameover.php");
+    header("Location: ./gameover.php");
     die();
 }
 if(isset($_POST['start'])){
-    header("Location: /welcome.php");
+    header("Location: ./welcome.php");
     die();
 }
 ?>

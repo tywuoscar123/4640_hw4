@@ -11,7 +11,7 @@ require_once("index.php");
 <form action="index.php" method="get">
     Name: <input type="text" name="name"><br>
     E-mail: <input type="text" name="email"><br>
-    <input type="submit" name="guess" value="Guess">
+    <input type="submit" name="enter" value="Enter">
 </form>
 
 </body>
