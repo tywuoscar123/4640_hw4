@@ -1,5 +1,8 @@
 <?php
 //Sources used: https://cs4640.cs.virginia.edu, https://www.geeksforgeeks.org/count-common-characters-in-two-strings/
+
+//link to the welcome page: https://cs4640.cs.virginia.edu/zhw9mc/hw4/welcome.php
+
 session_start();
 $listUrl = "https://www.cs.virginia.edu/~jh2jf/courses/cs4640/spring2022/wordlist.txt";
 $_SESSION["guessSuccessful"] = false;
